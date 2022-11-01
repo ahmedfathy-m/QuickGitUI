@@ -7,15 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74C73EB429085138005F16D5 /* HomeSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C73EB329085138005F16D5 /* HomeSceneView.swift */; };
+		74C73EB629085519005F16D5 /* HomeSceneMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C73EB529085519005F16D5 /* HomeSceneMenuManager.swift */; };
 		74CBBE3529072E400029AF59 /* QuickGitUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CBBE3429072E400029AF59 /* QuickGitUIApp.swift */; };
 		74CBBE3729072E400029AF59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CBBE3629072E400029AF59 /* ContentView.swift */; };
 		74CBBE3929072E410029AF59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CBBE3829072E410029AF59 /* Assets.xcassets */; };
 		74CBBE3C29072E410029AF59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CBBE3B29072E410029AF59 /* Preview Assets.xcassets */; };
 		74CBBE3E29072E410029AF59 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CBBE3D29072E410029AF59 /* Persistence.swift */; };
 		74CBBE4129072E410029AF59 /* QuickGitUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74CBBE3F29072E410029AF59 /* QuickGitUI.xcdatamodeld */; };
+		74CBBE49290730200029AF59 /* HomeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CBBE48290730200029AF59 /* HomeCellView.swift */; };
+		74E0A8F4290C0DC9006C9823 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0A8F3290C0DC9006C9823 /* Navigator.swift */; };
+		74E0A8F9290C1419006C9823 /* UsersSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0A8F8290C1419006C9823 /* UsersSceneView.swift */; };
+		74E0A8FC290C143D006C9823 /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0A8FB290C143D006C9823 /* UserCellView.swift */; };
+		74E0A900290C1764006C9823 /* RepositoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0A8FF290C1764006C9823 /* RepositoryCellView.swift */; };
+		74E0A902290C18CE006C9823 /* RepositoriesListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0A901290C18CE006C9823 /* RepositoriesListScene.swift */; };
+		74E0A905290C24D6006C9823 /* RepositorySceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0A904290C24D6006C9823 /* RepositorySceneView.swift */; };
+		74E0A908290C2965006C9823 /* ActionCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0A907290C2965006C9823 /* ActionCellView.swift */; };
+		74E0A90C290C32D2006C9823 /* ProfileSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E0A90B290C32D2006C9823 /* ProfileSceneView.swift */; };
+		74F90DFC29118CA30004418F /* IssueCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F90DFB29118CA30004418F /* IssueCellView.swift */; };
+		74F90DFE29118D940004418F /* IssuesListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F90DFD29118D940004418F /* IssuesListScene.swift */; };
+		74F90E0129118F260004418F /* PullRequestsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F90E0029118F260004418F /* PullRequestsScene.swift */; };
+		74F90E0429118F360004418F /* PullRequestCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F90E0329118F360004418F /* PullRequestCellView.swift */; };
+		74F90E082911939A0004418F /* CommitCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F90E072911939A0004418F /* CommitCellView.swift */; };
+		74F90E0A291198E90004418F /* CommitsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F90E09291198E90004418F /* CommitsScene.swift */; };
+		74F90E0E2911DA440004418F /* OrganizationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F90E0D2911DA440004418F /* OrganizationCell.swift */; };
+		74F90E102911DC180004418F /* OrganizationsListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F90E0F2911DC180004418F /* OrganizationsListScene.swift */; };
+		74F90E132911DE490004418F /* OrganizationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F90E122911DE490004418F /* OrganizationScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74C73EB329085138005F16D5 /* HomeSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneView.swift; sourceTree = "<group>"; };
+		74C73EB529085519005F16D5 /* HomeSceneMenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSceneMenuManager.swift; sourceTree = "<group>"; };
 		74CBBE3129072E400029AF59 /* QuickGitUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickGitUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CBBE3429072E400029AF59 /* QuickGitUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickGitUIApp.swift; sourceTree = "<group>"; };
 		74CBBE3629072E400029AF59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -23,6 +45,24 @@
 		74CBBE3B29072E410029AF59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		74CBBE3D29072E410029AF59 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		74CBBE4029072E410029AF59 /* QuickGitUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuickGitUI.xcdatamodel; sourceTree = "<group>"; };
+		74CBBE48290730200029AF59 /* HomeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellView.swift; sourceTree = "<group>"; };
+		74E0A8F3290C0DC9006C9823 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		74E0A8F8290C1419006C9823 /* UsersSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSceneView.swift; sourceTree = "<group>"; };
+		74E0A8FB290C143D006C9823 /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		74E0A8FF290C1764006C9823 /* RepositoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryCellView.swift; sourceTree = "<group>"; };
+		74E0A901290C18CE006C9823 /* RepositoriesListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListScene.swift; sourceTree = "<group>"; };
+		74E0A904290C24D6006C9823 /* RepositorySceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySceneView.swift; sourceTree = "<group>"; };
+		74E0A907290C2965006C9823 /* ActionCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCellView.swift; sourceTree = "<group>"; };
+		74E0A90B290C32D2006C9823 /* ProfileSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSceneView.swift; sourceTree = "<group>"; };
+		74F90DFB29118CA30004418F /* IssueCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCellView.swift; sourceTree = "<group>"; };
+		74F90DFD29118D940004418F /* IssuesListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesListScene.swift; sourceTree = "<group>"; };
+		74F90E0029118F260004418F /* PullRequestsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestsScene.swift; sourceTree = "<group>"; };
+		74F90E0329118F360004418F /* PullRequestCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestCellView.swift; sourceTree = "<group>"; };
+		74F90E072911939A0004418F /* CommitCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCellView.swift; sourceTree = "<group>"; };
+		74F90E09291198E90004418F /* CommitsScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitsScene.swift; sourceTree = "<group>"; };
+		74F90E0D2911DA440004418F /* OrganizationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationCell.swift; sourceTree = "<group>"; };
+		74F90E0F2911DC180004418F /* OrganizationsListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationsListScene.swift; sourceTree = "<group>"; };
+		74F90E122911DE490004418F /* OrganizationScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizationScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +95,14 @@
 		74CBBE3329072E400029AF59 /* QuickGitUI */ = {
 			isa = PBXGroup;
 			children = (
+				74E0A8F5290C11F3006C9823 /* Scenes */,
 				74CBBE3429072E400029AF59 /* QuickGitUIApp.swift */,
 				74CBBE3629072E400029AF59 /* ContentView.swift */,
 				74CBBE3829072E410029AF59 /* Assets.xcassets */,
 				74CBBE3D29072E410029AF59 /* Persistence.swift */,
 				74CBBE3F29072E410029AF59 /* QuickGitUI.xcdatamodeld */,
 				74CBBE3A29072E410029AF59 /* Preview Content */,
+				74E0A8F3290C0DC9006C9823 /* Navigator.swift */,
 			);
 			path = QuickGitUI;
 			sourceTree = "<group>";
@@ -71,6 +113,176 @@
 				74CBBE3B29072E410029AF59 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		74CBBE47290730080029AF59 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74CBBE48290730200029AF59 /* HomeCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		74E0A8F5290C11F3006C9823 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				74F90E112911DE3A0004418F /* OrganizationScene */,
+				74F90E0B2911DA2D0004418F /* OrganizationsListScene */,
+				74F90E05291193840004418F /* CommitsScene */,
+				74F90DFF29118F0D0004418F /* PullRequestsScene */,
+				74F90DF929118C8E0004418F /* IssuesScene */,
+				74E0A909290C32BA006C9823 /* ProfileScene */,
+				74E0A903290C249A006C9823 /* RepositoryScene */,
+				74E0A8FD290C1745006C9823 /* RepositoriesListScene */,
+				74E0A8F7290C13ED006C9823 /* Users Scene */,
+				74E0A8F6290C11F8006C9823 /* Home Scene */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		74E0A8F6290C11F8006C9823 /* Home Scene */ = {
+			isa = PBXGroup;
+			children = (
+				74CBBE47290730080029AF59 /* Components */,
+				74C73EB329085138005F16D5 /* HomeSceneView.swift */,
+				74C73EB529085519005F16D5 /* HomeSceneMenuManager.swift */,
+			);
+			path = "Home Scene";
+			sourceTree = "<group>";
+		};
+		74E0A8F7290C13ED006C9823 /* Users Scene */ = {
+			isa = PBXGroup;
+			children = (
+				74E0A8FA290C1427006C9823 /* Components */,
+				74E0A8F8290C1419006C9823 /* UsersSceneView.swift */,
+			);
+			path = "Users Scene";
+			sourceTree = "<group>";
+		};
+		74E0A8FA290C1427006C9823 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74E0A8FB290C143D006C9823 /* UserCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		74E0A8FD290C1745006C9823 /* RepositoriesListScene */ = {
+			isa = PBXGroup;
+			children = (
+				74E0A8FE290C1752006C9823 /* Components */,
+				74E0A901290C18CE006C9823 /* RepositoriesListScene.swift */,
+			);
+			path = RepositoriesListScene;
+			sourceTree = "<group>";
+		};
+		74E0A8FE290C1752006C9823 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74E0A8FF290C1764006C9823 /* RepositoryCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		74E0A903290C249A006C9823 /* RepositoryScene */ = {
+			isa = PBXGroup;
+			children = (
+				74E0A906290C2920006C9823 /* Components */,
+				74E0A904290C24D6006C9823 /* RepositorySceneView.swift */,
+			);
+			path = RepositoryScene;
+			sourceTree = "<group>";
+		};
+		74E0A906290C2920006C9823 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74E0A907290C2965006C9823 /* ActionCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		74E0A909290C32BA006C9823 /* ProfileScene */ = {
+			isa = PBXGroup;
+			children = (
+				74E0A90B290C32D2006C9823 /* ProfileSceneView.swift */,
+			);
+			path = ProfileScene;
+			sourceTree = "<group>";
+		};
+		74F90DF929118C8E0004418F /* IssuesScene */ = {
+			isa = PBXGroup;
+			children = (
+				74F90DFA29118C960004418F /* Components */,
+				74F90DFD29118D940004418F /* IssuesListScene.swift */,
+			);
+			path = IssuesScene;
+			sourceTree = "<group>";
+		};
+		74F90DFA29118C960004418F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74F90DFB29118CA30004418F /* IssueCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		74F90DFF29118F0D0004418F /* PullRequestsScene */ = {
+			isa = PBXGroup;
+			children = (
+				74F90E0229118F290004418F /* Components */,
+				74F90E0029118F260004418F /* PullRequestsScene.swift */,
+			);
+			path = PullRequestsScene;
+			sourceTree = "<group>";
+		};
+		74F90E0229118F290004418F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74F90E0329118F360004418F /* PullRequestCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		74F90E05291193840004418F /* CommitsScene */ = {
+			isa = PBXGroup;
+			children = (
+				74F90E062911938D0004418F /* Components */,
+				74F90E09291198E90004418F /* CommitsScene.swift */,
+			);
+			path = CommitsScene;
+			sourceTree = "<group>";
+		};
+		74F90E062911938D0004418F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74F90E072911939A0004418F /* CommitCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		74F90E0B2911DA2D0004418F /* OrganizationsListScene */ = {
+			isa = PBXGroup;
+			children = (
+				74F90E0C2911DA390004418F /* Components */,
+				74F90E0F2911DC180004418F /* OrganizationsListScene.swift */,
+			);
+			path = OrganizationsListScene;
+			sourceTree = "<group>";
+		};
+		74F90E0C2911DA390004418F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				74F90E0D2911DA440004418F /* OrganizationCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		74F90E112911DE3A0004418F /* OrganizationScene */ = {
+			isa = PBXGroup;
+			children = (
+				74F90E122911DE490004418F /* OrganizationScene.swift */,
+			);
+			path = OrganizationScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +355,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74F90E0429118F360004418F /* PullRequestCellView.swift in Sources */,
+				74E0A908290C2965006C9823 /* ActionCellView.swift in Sources */,
+				74F90E0E2911DA440004418F /* OrganizationCell.swift in Sources */,
+				74E0A902290C18CE006C9823 /* RepositoriesListScene.swift in Sources */,
+				74F90DFC29118CA30004418F /* IssueCellView.swift in Sources */,
+				74F90E132911DE490004418F /* OrganizationScene.swift in Sources */,
+				74E0A905290C24D6006C9823 /* RepositorySceneView.swift in Sources */,
 				74CBBE3E29072E410029AF59 /* Persistence.swift in Sources */,
 				74CBBE3729072E400029AF59 /* ContentView.swift in Sources */,
+				74C73EB629085519005F16D5 /* HomeSceneMenuManager.swift in Sources */,
+				74E0A8FC290C143D006C9823 /* UserCellView.swift in Sources */,
 				74CBBE4129072E410029AF59 /* QuickGitUI.xcdatamodeld in Sources */,
 				74CBBE3529072E400029AF59 /* QuickGitUIApp.swift in Sources */,
+				74F90E082911939A0004418F /* CommitCellView.swift in Sources */,
+				74F90E102911DC180004418F /* OrganizationsListScene.swift in Sources */,
+				74E0A900290C1764006C9823 /* RepositoryCellView.swift in Sources */,
+				74F90DFE29118D940004418F /* IssuesListScene.swift in Sources */,
+				74F90E0A291198E90004418F /* CommitsScene.swift in Sources */,
+				74E0A8F4290C0DC9006C9823 /* Navigator.swift in Sources */,
+				74C73EB429085138005F16D5 /* HomeSceneView.swift in Sources */,
+				74E0A90C290C32D2006C9823 /* ProfileSceneView.swift in Sources */,
+				74CBBE49290730200029AF59 /* HomeCellView.swift in Sources */,
+				74E0A8F9290C1419006C9823 /* UsersSceneView.swift in Sources */,
+				74F90E0129118F260004418F /* PullRequestsScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

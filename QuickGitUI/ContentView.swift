@@ -15,30 +15,43 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    
+    @State var navTitle = "Home"
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+            TabView {
+                Home()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
                     }
-                }
-                .onDelete(perform: deleteItems)
+                    .onAppear { navTitle = "Home" }
+                VStack {}
+                    .tabItem {
+                        Label("Explore", systemImage: "binoculars.fill")
+                    }
+                    .onAppear { navTitle = "Explore" }
+                VStack {}
+                    .tabItem {
+                        Label("Bookmarks", systemImage: "bookmark.fill")
+                    }
+                    .onAppear { navTitle = "Bookmarks" }
+                ProfileSceneView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person.fill")
+                    }
+                    .onAppear { navTitle = "Profile" }
             }
+            .navigationTitle(navTitle)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                NavigationLink {
+                    Text("Settings")
+                        .navigationTitle("Settings")
+                } label: {
+                    Image(systemName: "gearshape.fill")
                 }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+
             }
-            Text("Select an item")
         }
     }
 
