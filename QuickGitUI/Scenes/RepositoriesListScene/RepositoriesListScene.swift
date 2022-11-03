@@ -16,6 +16,8 @@ struct RepositoriesListScene: View {
             } label: {
                 RepositoryCellView()
             }.contextMenu {
+                Text("Options")
+                    .fontWeight(.bold)
                 Button {
                     
                 } label: {
@@ -42,8 +44,6 @@ struct RepositoriesListScene: View {
                     Image(systemName: "safari")
                     Text("Open In Safari")
                 }
-
-
             }
             
             NavigationLink {

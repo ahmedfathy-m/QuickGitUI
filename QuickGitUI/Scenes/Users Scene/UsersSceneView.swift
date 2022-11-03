@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct UsersSceneView: View {
+    @State var users: [User] = [User]()
     var body: some View {
-        List {
+        List (users, id: \.id) { user in
             NavigationLink {
                 ProfileSceneView()
                     .navigationBarTitleDisplayMode(.inline)
             } label: {
-                UserCellView()
+                UserCellView(login: user.login , imageString: user.avatarURL)
             }
+        }.task {
+            do {
+                var userList: Users = try await NetworkService.shared.loadData(from: UsersRouter.allUsers(perPage: 10, pageNo: 1))
+                users = userList.items
+            }
+            catch { print(error) }
         }
     }
 }

@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct Home: View {
+    @State var didFetch: Bool = false
+    @State var didReturnWithError: Bool = false
+    @State var errorString: String = ""
+    @State var login: String = ""
     let menuItems = HomeMenu.allCases
     var body: some View {
         List {
@@ -40,6 +44,16 @@ struct Home: View {
 
             }
         }.navigationTitle("Home")
+            .task {
+                do {
+                    let user: User = try await NetworkService.shared.loadData(from: UsersRouter.someUser(login: "ahmedfathy-m"))
+                    login = user.login
+                    didFetch.toggle()
+                } catch {
+                    errorString = error.localizedDescription
+                    didReturnWithError.toggle()
+                }
+            }.alert(errorString, isPresented: $didReturnWithError) { }
     }
 }
 
