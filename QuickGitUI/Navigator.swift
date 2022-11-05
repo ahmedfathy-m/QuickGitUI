@@ -7,27 +7,21 @@
 
 import SwiftUI
 
-enum Route: String {
-    case settings
-    case issues
-    case repositories
-    case users
-    case organizations
+enum ViewRouter {
+    // MARK: - MAIN PAGES
+    case allUsers
+    case allRepositories
+    case allIssues
+    case allOrgs
 }
 
-struct Navigator {
-    static func navigateTo<T: View>(_ route: Route, content: () -> T) -> AnyView {
-        switch route {
-        case .settings:
-            return AnyView(NavigationLink(destination: Text("Settings"), label: content))
-        case .issues:
-            return AnyView(NavigationLink(destination: IssuesListScene(), label: content))
-        case .repositories:
-            return AnyView(NavigationLink(destination: RepositoriesListScene(), label: content))
-        case .users:
-            return AnyView(NavigationLink(destination: UsersSceneView().navigationTitle("Users"), label: content))
-        case .organizations:
-            return AnyView(NavigationLink(destination: OrganizationsListScene(), label: content))
+extension ViewRouter {
+    func instantiateView () -> AnyView {
+        switch self {
+            case .allUsers: return AnyView(UsersSceneView().navigationTitle("Users"))
+            case .allRepositories: return AnyView(RepositoriesListScene())
+            case .allIssues: return AnyView(IssuesListScene())
+            case .allOrgs: return AnyView(OrganizationsListScene())
         }
     }
 }

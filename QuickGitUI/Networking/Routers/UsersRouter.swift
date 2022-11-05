@@ -12,6 +12,7 @@ enum UsersRouter {
     case getAuthUser
     case updateAuthUser
     case someUser(login: String)
+    case serachForUser(_ user: String, perPage: Int, pageNo: Int)
 }
 
 extension UsersRouter: NetworkingRouter {
@@ -21,6 +22,7 @@ extension UsersRouter: NetworkingRouter {
         case .getAuthUser: return URL(string: "https://api.github.com/user")
         case .updateAuthUser: return URL(string: "https://api.github.com/user")
         case .someUser(let login): return URL(string: "https://api.github.com/users/\(login)")
+        case .serachForUser: return URL(string: "https://api.github.com/search/users")
         }
     }
     
@@ -30,6 +32,7 @@ extension UsersRouter: NetworkingRouter {
         case .getAuthUser: return .get
         case .updateAuthUser: return .patch
         case .someUser: return .get
+        case .serachForUser: return .get
         }
     }
     
@@ -39,10 +42,11 @@ extension UsersRouter: NetworkingRouter {
     
     var defaultQueryParameters: [String : String] {
         switch self {
-        case .allUsers(let perPage, let pageNo): return ["per_page":"\(perPage)", "page":"\(pageNo)", "q":"repos:%3E42+followers:%3E1000"]
+        case .allUsers(let perPage, let pageNo): return ["per_page":"\(perPage)", "page":"\(pageNo)", "q":"repos:>35+followers:>1000"]
         case .getAuthUser: return [:]
         case .updateAuthUser: return [:]
         case .someUser: return [:]
+        case .serachForUser(let user, let perPage, let pageNo): return ["per_page":"\(perPage)", "page":"\(pageNo)", "q":"\(user)"]
         }
     }
     

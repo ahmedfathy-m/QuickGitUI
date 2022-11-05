@@ -12,18 +12,18 @@ struct Home: View {
     @State var didReturnWithError: Bool = false
     @State var errorString: String = ""
     @State var login: String = ""
-    let menuItems = HomeMenu.allCases
+    
     var body: some View {
         List {
             Section ("Main") {
-                ForEach(menuItems, id: \.title) { item in
-                    Navigator.navigateTo(Route(rawValue: item.title.lowercased())!) {
-                        HomeCellView(menuIcon: Image(systemName: item.image), title: item.title, color: item.color)
-                    }
-                }
-                Link(destination: URL(string: "https://github.com/")!) {
-                    HomeCellView(menuIcon: Image("github"), title: "Github Web", color: .red)
-                }
+                // MARK: - NAVIGATION LINKS
+                NavigationLink { ViewRouter.allUsers.instantiateView() } label: { HomeCellView(menuIcon: Image(systemName: "person"), title: "Users", color: .gray) }
+                NavigationLink { ViewRouter.allRepositories.instantiateView() } label: { HomeCellView(menuIcon: Image(systemName: "book.closed"), title: "Repositories", color: .blue) }
+                NavigationLink { ViewRouter.allIssues.instantiateView() } label: { HomeCellView(menuIcon: Image(systemName: "exclamationmark.circle"), title: "Issues", color: .green) }
+                NavigationLink { ViewRouter.allOrgs.instantiateView() } label: { HomeCellView(menuIcon: Image(systemName: "building.2"), title: "Organizations", color: .orange) }
+                
+                // MARK: - GITHUB WEB
+                Link(destination: URL(string: "https://github.com/")!) { HomeCellView(menuIcon: Image("github"), title: "Github Web", color: .red) }
             }
             
             Section("Favourites") {
@@ -46,9 +46,7 @@ struct Home: View {
         }.navigationTitle("Home")
             .task {
                 do {
-                    let user: User = try await NetworkService.shared.loadData(from: UsersRouter.someUser(login: "ahmedfathy-m"))
-                    login = user.login
-                    didFetch.toggle()
+                    let _: User = try await NetworkService.shared.loadData(from: UsersRouter.someUser(login: "wesbos"))
                 } catch {
                     errorString = error.localizedDescription
                     didReturnWithError.toggle()

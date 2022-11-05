@@ -87,7 +87,7 @@ struct ProfileSceneView: View {
                     ActionCellView(itemTitle: "Starred", iconColor: .yellow, isCounting: true, itemIcon: Image(systemName: "star"))
                 }
 
-            }
+            }.listStyle(.plain)
         }
             
     }

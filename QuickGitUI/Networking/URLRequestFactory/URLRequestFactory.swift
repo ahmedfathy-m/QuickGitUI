@@ -15,6 +15,7 @@ struct URLRequestFactory {
     let body: [String: String]?
     let path: [String: String]?
     let headers: [String: String]?
+    let cachePolicy: URLRequest.CachePolicy = .returnCacheDataElseLoad
     
     func buildRequest() throws -> URLRequest {
         // Unwrapping URL (Checking for bad url strings)
@@ -25,6 +26,7 @@ struct URLRequestFactory {
         
         // Building the Request
         var request = URLRequest(url: targetURL)
+        request.cachePolicy = cachePolicy
         
         // Assigning an HTTP Method
         request.httpMethod = method?.rawValue ?? endpoint.defaultMethod.rawValue

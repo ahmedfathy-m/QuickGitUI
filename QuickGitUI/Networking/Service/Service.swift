@@ -10,20 +10,29 @@ import Foundation
 class NetworkService {
     // MARK: - SIGNLETON
     static let shared = NetworkService()
-    private init() {}
+    private init() {
+        session.configuration.urlCache = URLCache(memoryCapacity: 10485760, diskCapacity: 0)
+    }
+    
+    // MARK: - URL SESSION
+    let session = URLSession(configuration: .default)
     
     // MARK: - LOAD ENDPOINT
     func loadData<T: Codable>(from endpoint: NetworkingRouter,method: HTTPMethod? = nil, query: [String: String]? = nil, body: [String:String]? = nil , headers: [String: String]? = nil) async throws -> T {
         
+        // 1. CREATION
         let factory = URLRequestFactory(endpoint: endpoint, method: method, body: body, path: query, headers: headers)
         let request = try factory.buildRequest()
         
-        let (data, response) = try await URLSession.shared.data(for: request)
+        // 2. EXECUTION
+        let (data, response) = try await session.data(for: request, delegate: TaskDelegate())
         
+        // 3. VALIDATION
         if let error = validateResponse(response) {
             throw error
         }
         
+        // 4. DECODING
         return try decodeData(data)
     }
     
